@@ -1,0 +1,23 @@
+{
+  "engine": "Artifact Tool formula calculation; native Excel/LibreOffice not executed",
+  "scenarios": {
+    "Base": {
+      "equity_value": 540.4622362090481,
+      "enterprise_value": 563.2493666266057,
+      "all_forecast_periods_match_reference": true
+    },
+    "Downside": {
+      "equity_value": 365.1923752764008,
+      "enterprise_value": 387.9795056939584,
+      "all_forecast_periods_match_reference": true
+    }
+  },
+  "tests": [
+    "2030 growth perturbation changes linked DCF; restored",
+    "Blank unselected case allowed; selecting missing input propagates an error; restored",
+    "WACC equal to g rejects valuation; restored",
+    "Sensitivity center equals active DCF",
+    "All historical annual revenues reconcile to monthly source"
+  ],
+  "formula_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

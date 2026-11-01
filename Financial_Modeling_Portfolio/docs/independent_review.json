@@ -1,0 +1,216 @@
+{
+  "status": "PASS: 34 independent source-data, regression, financial-math and exported-workbook checks complete.",
+  "method": "Independent NumPy QR regression, QR-based HC1 covariance, source-CSV reconciliation and separately coded financial calculations; source algorithm reviewed without invoking its fit/model functions. Exported XLSX formulas separately parsed and evaluated from XML, including Base/Downside and a final-year growth perturbation; caches reconciled.",
+  "checks": [
+    {
+      "check": "Synthetic status disclosed",
+      "passed": true,
+      "evidence": "Fictional company and deterministic simulated data; skill demonstration, not employment evidence."
+    },
+    {
+      "check": "Monthly input structure",
+      "passed": true,
+      "evidence": "96 unique, uninterrupted months"
+    },
+    {
+      "check": "Chronological train and holdout",
+      "passed": true,
+      "evidence": "84 training months: 2018-2024; 12 holdout months: 2025"
+    },
+    {
+      "check": "Positive complete revenue",
+      "passed": true,
+      "evidence": "No missing input cells; revenue positive for logarithm"
+    },
+    {
+      "check": "Driver regression training coefficients and HC1",
+      "passed": true,
+      "evidence": "Independent QR OLS/HC1; n=84, k=14, residual df=70"
+    },
+    {
+      "check": "Driver regression full-refit coefficients and HC1",
+      "passed": true,
+      "evidence": "Independent QR OLS/HC1; n=96, k=14, residual df=82"
+    },
+    {
+      "check": "Trend and seasonality training coefficients and HC1",
+      "passed": true,
+      "evidence": "Independent QR OLS/HC1; n=84, k=13, residual df=71"
+    },
+    {
+      "check": "Trend and seasonality full-refit coefficients and HC1",
+      "passed": true,
+      "evidence": "Independent QR OLS/HC1; n=96, k=13, residual df=83"
+    },
+    {
+      "check": "Driver regression holdout metrics",
+      "passed": true,
+      "evidence": {
+        "rmse_musd": 0.6617590715214173,
+        "mae_musd": 0.6049186350113507,
+        "mape_pct": 2.5343355551487683
+      }
+    },
+    {
+      "check": "Trend and seasonality holdout metrics",
+      "passed": true,
+      "evidence": {
+        "rmse_musd": 1.0342972824783914,
+        "mae_musd": 0.7918309906060962,
+        "mape_pct": 3.461362887330286
+      }
+    },
+    {
+      "check": "Seasonal naive holdout metrics",
+      "passed": true,
+      "evidence": {
+        "rmse_musd": 2.1493834857684906,
+        "mae_musd": 1.859768411415166,
+        "mape_pct": 7.49267289445537
+      }
+    },
+    {
+      "check": "Response not used in holdout fitting",
+      "passed": true,
+      "evidence": "Independent fit uses training rows only; source code reviewed for matching split"
+    },
+    {
+      "check": "Realized holdout predictor caveat",
+      "passed": true,
+      "evidence": "Holdout driver values are observed 2025 data; conditional validation, not ex-ante predictor forecast"
+    },
+    {
+      "check": "Log retransformation caveat",
+      "passed": true,
+      "evidence": "exp(predicted log revenue), no smearing correction; forecasts represent conditional median, not unbiased conditional mean."
+    },
+    {
+      "check": "2026 conditional forecast and annual total",
+      "passed": true,
+      "evidence": "Independent annual sum = 329.339117624571 USDm"
+    },
+    {
+      "check": "2026 assumed driver",
+      "passed": true,
+      "evidence": "Future driver equals December 2025 plus 0.10 per month"
+    },
+    {
+      "check": "Monthly to annual historical revenue",
+      "passed": true,
+      "evidence": "2020-2025 annual source revenue reconciles to monthly source"
+    },
+    {
+      "check": "Historical statements and rolls",
+      "passed": true,
+      "evidence": "Max residual = 2e-12 USDm"
+    },
+    {
+      "check": "Base financial statements and FCFF",
+      "passed": true,
+      "evidence": "All annual financial values independently recomputed; max difference 9.95e-13 USDm"
+    },
+    {
+      "check": "Base DCF and as-of bridge",
+      "passed": true,
+      "evidence": "EV 563.249366627, equity 540.462236209; 2025-12-31 cash/debt bridge"
+    },
+    {
+      "check": "Downside financial statements and FCFF",
+      "passed": true,
+      "evidence": "All annual financial values independently recomputed; max difference 9.95e-13 USDm"
+    },
+    {
+      "check": "Downside DCF and as-of bridge",
+      "passed": true,
+      "evidence": "EV 387.979505694, equity 365.192375276; 2025-12-31 cash/debt bridge"
+    },
+    {
+      "check": "WACC/g sensitivity and center",
+      "passed": true,
+      "evidence": "25 independently reproduced values; max difference 4.55e-13 USDm"
+    },
+    {
+      "check": "Terminal reinvestment limitation disclosed",
+      "passed": true,
+      "evidence": "Simple final-year FCFF perpetuity; no normalized steady-state ROIC/reinvestment schedule"
+    },
+    {
+      "check": "Workbook formula recalculation from exported XML",
+      "passed": true,
+      "evidence": "All 866 exported formulas independently recalculated. ISO-date cells normalized to Excel serial dates. Maximum numeric cache difference 3.410605131648481e-13; no nonnumeric mismatches. Executed docs/independent_workbook_check.py."
+    },
+    {
+      "check": "Workbook cached error cells",
+      "passed": true,
+      "evidence": "No cached error cells"
+    },
+    {
+      "check": "Workbook Base formulas vs independent reference",
+      "passed": true,
+      "evidence": "All 25 mapped financial metrics per forecast year plus EV/equity; max difference 1.14e-13 USDm"
+    },
+    {
+      "check": "Workbook Base sensitivity center",
+      "passed": true,
+      "evidence": "Center matches active DCF"
+    },
+    {
+      "check": "Workbook Downside formulas vs independent reference",
+      "passed": true,
+      "evidence": "All 25 mapped financial metrics per forecast year plus EV/equity; max difference 1.14e-13 USDm"
+    },
+    {
+      "check": "Workbook Downside sensitivity center",
+      "passed": true,
+      "evidence": "Center matches active DCF"
+    },
+    {
+      "check": "Workbook full sensitivity grid",
+      "passed": true,
+      "evidence": "All 25 values reconcile; max difference 3.41e-13 USDm"
+    },
+    {
+      "check": "Workbook final-year growth perturbation",
+      "passed": true,
+      "evidence": "2030 Base growth +1pp changes equity from 540.462236 to 538.471931"
+    },
+    {
+      "check": "Workbook WACC / growth guard",
+      "passed": true,
+      "evidence": "WACC equal to terminal growth produces NA"
+    },
+    {
+      "check": "Workbook synthetic disclosure",
+      "passed": true,
+      "evidence": "All eight worksheets identify the synthetic work sample"
+    }
+  ],
+  "limitations": [
+    "Illustrative fictional company with simulated data; not verification of employment or independent authorship.",
+    "Holdout driver regression uses realized 2025 industrial index. Results measure conditional prediction, not a genuine ex-ante forecast of all inputs.",
+    "One 12-month holdout is used for model selection; no further untouched test set or rolling-window validation is supplied.",
+    "Exponentiated log forecasts represent conditional medians without a smearing correction. Summing monthly medians is a scenario planning total, not a formally estimated annual conditional mean or median.",
+    "HC1 addresses heteroskedasticity, not serial correlation; synthetic time-series results do not establish real-world causal effects.",
+    "Terminal value extrapolates final-year FCFF without a normalized terminal reinvestment/ROIC schedule; sensitivity is material.",
+    "Higher debt interest changes earnings and cash. Unlevered FCFF at fixed WACC is correctly independent of debt interest, so interest stress alone does not directly reduce the DCF.",
+    "Native Stata, EViews, Excel and Power Query were not executed. XLSX formulas/caches independently inspected and recalculated by a limited Python evaluator covering functions present, not native Excel."
+  ],
+  "workbook": {
+    "formula_count": 866,
+    "worksheet_count": 8,
+    "embedded_chart_count": 2,
+    "execution": "Independent XML/formula evaluator; not native Excel",
+    "embedded_image_count": 0,
+    "reproduction_script": "docs/independent_workbook_check.py (Python standard library)",
+    "final_check": {
+      "passed": true,
+      "formula_count": 866,
+      "max_cache_difference": 3.410605131648481e-13,
+      "scenario_max_difference": 1.1368683772161603e-13,
+      "sensitivity_max_difference": 3.410605131648481e-13,
+      "growth_perturbation_equity_effect": -1.9903052592661652,
+      "wacc_growth_guard": true,
+      "native_excel_executed": false
+    }
+  }
+}

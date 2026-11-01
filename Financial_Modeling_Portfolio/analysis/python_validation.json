@@ -1,0 +1,20 @@
+{
+  "training_rank": 14,
+  "driver_parameter_count": 14,
+  "monthly_rows": 96,
+  "dates_unique": true,
+  "validation_has_no_training_dates": true,
+  "historical_balance_max_error": 5.684341886080802e-14,
+  "cases": {
+    "Base": {
+      "balance_max_error": 1.1368683772161603e-13,
+      "cash_max_error": 1.0658141036401503e-14
+    },
+    "Downside": {
+      "balance_max_error": 1.1368683772161603e-13,
+      "cash_max_error": 2.1316282072803006e-14
+    }
+  },
+  "later_period_growth_perturbation_changes_equity": true,
+  "python_engine": "NumPy least squares and explicit HC1 covariance; deterministic source seed20261101"
+}

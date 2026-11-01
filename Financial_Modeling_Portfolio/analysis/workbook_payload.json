@@ -1,0 +1,2289 @@
+{
+  "metrics": {
+    "company": "Northstar Industrial Components",
+    "data_status": "Fictional company and deterministic simulated data; skill demonstration, not employment evidence.",
+    "currency": "USD millions",
+    "valuation_date": "2025-12-31",
+    "training_period": "2018-01 to 2024-12",
+    "validation_period": "2025-01 to 2025-12",
+    "training_n": 84,
+    "validation_n": 12,
+    "selected_model": "Driver regression",
+    "selection_rule": "Lowest 2025 holdout RMSE; selection is descriptive and should be confirmed on additional rolling windows.",
+    "retransformation": "exp(predicted log revenue), no smearing correction; forecasts represent conditional median, not unbiased conditional mean.",
+    "future_macro_assumption": "2026 industrial_index increases by 0.10 per month from December2025; hypothetical input known at forecast origin, not observed 2026 values.",
+    "2026_revenue_forecast": 329.33911762457393,
+    "2026_revenue_growth": 0.13889751096603664,
+    "model_metrics": {
+      "Driver regression": {
+        "rmse_musd": 0.6617590715215007,
+        "mae_musd": 0.6049186350115002,
+        "mape_pct": 2.534335555149423
+      },
+      "Trend and seasonality": {
+        "rmse_musd": 1.0342972824784824,
+        "mae_musd": 0.7918309906061948,
+        "mape_pct": 3.461362887330726
+      },
+      "Seasonal naive": {
+        "rmse_musd": 2.1493834857684675,
+        "mae_musd": 1.8597684114151825,
+        "mape_pct": 7.492672894455386
+      }
+    },
+    "training_driver_r2": 0.9887827604950842,
+    "assumptions": {
+      "Base": {
+        "revenue_growth": [
+          0.13889751096603664,
+          0.065,
+          0.055,
+          0.045,
+          0.04
+        ],
+        "gross_margin": [
+          0.44,
+          0.445,
+          0.45,
+          0.45,
+          0.45
+        ],
+        "opex_pct": [
+          0.23,
+          0.228,
+          0.225,
+          0.225,
+          0.225
+        ],
+        "da_rate": [
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ],
+        "interest_rate": [
+          0.055,
+          0.055,
+          0.055,
+          0.055,
+          0.055
+        ],
+        "tax_rate": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "dso": [
+          54,
+          53,
+          52,
+          52,
+          52
+        ],
+        "dio": [
+          65,
+          64,
+          63,
+          63,
+          63
+        ],
+        "dpo": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "capex_pct": [
+          0.065,
+          0.065,
+          0.06,
+          0.06,
+          0.06
+        ],
+        "debt_repayment": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "new_borrowing": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout": [
+          0.4,
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      },
+      "Downside": {
+        "revenue_growth": [
+          0.05889751096603664,
+          0.02,
+          0.025,
+          0.03,
+          0.035
+        ],
+        "gross_margin": [
+          0.4,
+          0.405,
+          0.41,
+          0.415,
+          0.42
+        ],
+        "opex_pct": [
+          0.245,
+          0.243,
+          0.24,
+          0.238,
+          0.235
+        ],
+        "da_rate": [
+          0.09,
+          0.09,
+          0.09,
+          0.09,
+          0.09
+        ],
+        "interest_rate": [
+          0.075,
+          0.075,
+          0.075,
+          0.075,
+          0.075
+        ],
+        "tax_rate": [
+          0.25,
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "dso": [
+          65,
+          64,
+          63,
+          62,
+          60
+        ],
+        "dio": [
+          78,
+          76,
+          74,
+          72,
+          70
+        ],
+        "dpo": [
+          51,
+          51,
+          51,
+          51,
+          51
+        ],
+        "capex_pct": [
+          0.055,
+          0.055,
+          0.055,
+          0.055,
+          0.055
+        ],
+        "debt_repayment": [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "new_borrowing": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "payout": [
+          0.2,
+          0.2,
+          0.2,
+          0.2,
+          0.2
+        ]
+      }
+    },
+    "historical_financials": [
+      {
+        "year": 2020,
+        "revenue": 177.5961497057273,
+        "cogs": 103.00576682932183,
+        "opex": 40.847114432317284,
+        "depreciation": 9.0,
+        "interest": 4.95,
+        "tax": 4.948317111022047,
+        "net_income": 14.844951333066142,
+        "ar": 26.639422455859094,
+        "inventory": 18.541038029277928,
+        "ap": 14.420807356105056,
+        "ppe": 101.65576898234363,
+        "cash": 26.148381454857386,
+        "debt": 85.0,
+        "equity": 73.563803566233,
+        "capex": 10.655768982343638,
+        "dividends": 5.937980533226457,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      },
+      {
+        "year": 2021,
+        "revenue": 214.42366601710918,
+        "cogs": 123.722455291872,
+        "opex": 49.31744318393511,
+        "depreciation": 9.149019208410927,
+        "interest": 4.675,
+        "tax": 6.8899370832227875,
+        "net_income": 20.669811249668363,
+        "ar": 32.16354990256637,
+        "inventory": 22.270041952536957,
+        "ap": 17.32114374086208,
+        "ppe": 105.37216973495924,
+        "cash": 23.481072466833496,
+        "debt": 80.0,
+        "equity": 85.96569031603403,
+        "capex": 12.86541996102655,
+        "dividends": 8.267924499867346,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      },
+      {
+        "year": 2022,
+        "revenue": 219.85776979318385,
+        "cogs": 126.19835986128751,
+        "opex": 50.567287052432285,
+        "depreciation": 9.483495276146332,
+        "interest": 4.4,
+        "tax": 7.302156900829429,
+        "net_income": 21.906470702488285,
+        "ar": 32.978665468977574,
+        "inventory": 22.715704775031753,
+        "ap": 17.667770380580254,
+        "ppe": 109.08014064640395,
+        "cash": 27.002832227693943,
+        "debt": 75.0,
+        "equity": 99.109572737527,
+        "capex": 13.19146618759103,
+        "dividends": 8.762588280995315,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      },
+      {
+        "year": 2023,
+        "revenue": 258.10219880135617,
+        "cogs": 147.37635551557435,
+        "opex": 59.36350572431192,
+        "depreciation": 9.817212658176356,
+        "interest": 4.125,
+        "tax": 9.355031225823385,
+        "net_income": 28.065093677470156,
+        "ar": 38.71532982020342,
+        "inventory": 26.52774399280338,
+        "ap": 20.63268977218041,
+        "ppe": 114.74905991630895,
+        "cash": 26.589184986873704,
+        "debt": 70.0,
+        "equity": 115.9486289440091,
+        "capex": 15.48613192808137,
+        "dividends": 11.226037470988063,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      },
+      {
+        "year": 2024,
+        "revenue": 268.4121182572706,
+        "cogs": 152.4580831701297,
+        "opex": 61.73478719917224,
+        "depreciation": 10.327415392467806,
+        "interest": 3.85,
+        "tax": 10.010458123875216,
+        "net_income": 30.031374371625645,
+        "ar": 40.26181773859059,
+        "inventory": 27.442454970623345,
+        "ap": 21.34413164381816,
+        "ppe": 120.5263716192774,
+        "cash": 32.08094088231127,
+        "debt": 65.0,
+        "equity": 133.9674535669845,
+        "capex": 16.104727095436235,
+        "dividends": 12.012549748650258,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      },
+      {
+        "year": 2025,
+        "revenue": 289.17362137811824,
+        "cogs": 163.38309607863678,
+        "opex": 66.5099329169672,
+        "depreciation": 10.847373445734965,
+        "interest": 3.575,
+        "tax": 11.214554734194822,
+        "net_income": 33.64366420258447,
+        "ar": 43.37604320671773,
+        "inventory": 29.408957294154618,
+        "ap": 22.87363345100915,
+        "ppe": 127.02941545622953,
+        "cash": 37.212869582442416,
+        "debt": 60.0,
+        "equity": 154.15365208853515,
+        "capex": 17.350417282687093,
+        "dividends": 13.457465681033788,
+        "new_borrowing": 0.0,
+        "debt_repayment": 5.0
+      }
+    ],
+    "cases": {
+      "Base": {
+        "annual_forecast": [
+          {
+            "year": 2026,
+            "revenue": 329.33911762457393,
+            "cogs": 184.42990586976143,
+            "opex": 75.74799705365201,
+            "depreciation": 11.432647391060657,
+            "interest": 3.3,
+            "tax": 13.60714182752496,
+            "net_income": 40.82142548257488,
+            "ar": 48.724143429389024,
+            "inventory": 32.84368186721779,
+            "ap": 25.769658080432418,
+            "ppe": 137.00381071076617,
+            "cash": 40.84452945113948,
+            "debt": 55.0,
+            "equity": 178.6465073780801,
+            "capex": 21.407042645597308,
+            "dividends": 16.328570193029954,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 46.36727270732433,
+            "cfi": -21.407042645597308,
+            "cff": -21.328570193029954,
+            "ebit": 57.728567310099834,
+            "ebitda": 69.16121470116049,
+            "delta_nwc": 5.886800166311204,
+            "ufcf": 27.43523006172702,
+            "balance_check": -2.842170943040401e-14,
+            "cash_check": -7.105427357601002e-15
+          },
+          {
+            "year": 2027,
+            "revenue": 350.74616027017123,
+            "cogs": 194.66411894994502,
+            "opex": 79.97012454159905,
+            "depreciation": 12.330342963968956,
+            "interest": 3.025,
+            "tax": 15.18914345366455,
+            "net_income": 45.567430360993654,
+            "ar": 50.93026436799747,
+            "inventory": 34.13288661040132,
+            "ap": 27.19964401766355,
+            "ppe": 147.47196816435834,
+            "cash": 50.651490469582654,
+            "debt": 50.0,
+            "equity": 205.9869655946763,
+            "capex": 22.79850041756113,
+            "dividends": 18.22697214439746,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 55.83243358040176,
+            "cfi": -22.79850041756113,
+            "cff": -23.22697214439746,
+            "ebit": 63.7815738146582,
+            "ebitda": 76.11191677862716,
+            "delta_nwc": 2.065339744560852,
+            "ufcf": 35.30268316284063,
+            "balance_check": -5.684341886080802e-14,
+            "cash_check": 3.552713678800501e-15
+          },
+          {
+            "year": 2028,
+            "revenue": 370.03719908503064,
+            "cogs": 203.52045949676688,
+            "opex": 83.2583697941319,
+            "depreciation": 13.27247713479225,
+            "interest": 2.75,
+            "tax": 16.808973164834903,
+            "net_income": 50.42691949450471,
+            "ar": 52.71762836279889,
+            "inventory": 35.12818889944195,
+            "ap": 28.437105299548247,
+            "ppe": 156.40172297466793,
+            "cash": 65.43268235401854,
+            "debt": 45.0,
+            "equity": 236.24311729137912,
+            "capex": 22.202231945101836,
+            "dividends": 20.170767797801886,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 62.15419162733961,
+            "cfi": -22.202231945101836,
+            "cff": -25.170767797801886,
+            "ebit": 69.98589265933961,
+            "ebitda": 83.25836979413187,
+            "delta_nwc": 1.5452050019573491,
+            "ufcf": 42.01445968223777,
+            "balance_check": -5.684341886080802e-14,
+            "cash_check": 0.0
+          },
+          {
+            "year": 2029,
+            "revenue": 386.688873043857,
+            "cogs": 212.67888017412136,
+            "opex": 87.00499643486782,
+            "depreciation": 14.076155067720114,
+            "interest": 2.475,
+            "tax": 17.613460341786922,
+            "net_income": 52.84038102536077,
+            "ar": 55.089921639124825,
+            "inventory": 36.708957399916834,
+            "ap": 29.716775038027915,
+            "ppe": 165.52690028957923,
+            "cash": 80.33834161600255,
+            "debt": 40.0,
+            "equity": 267.9473459065956,
+            "capex": 23.201332382631417,
+            "dividends": 21.13615241014431,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 64.24314405475974,
+            "cfi": -23.201332382631417,
+            "cff": -26.13615241014431,
+            "ebit": 72.92884136714768,
+            "ebitda": 87.00499643486779,
+            "delta_nwc": 2.67339203832114,
+            "ufcf": 42.89806167212831,
+            "balance_check": -5.684341886080802e-14,
+            "cash_check": 0.0
+          },
+          {
+            "year": 2030,
+            "revenue": 402.1564279656113,
+            "cogs": 221.1860353810862,
+            "opex": 90.48519629226254,
+            "depreciation": 14.89742102606213,
+            "interest": 2.2,
+            "tax": 18.346943816550095,
+            "net_income": 55.040831449650284,
+            "ar": 57.29351850468982,
+            "inventory": 38.177315695913514,
+            "ap": 30.905446039549034,
+            "ppe": 174.7588649414538,
+            "cash": 96.6475916738776,
+            "debt": 35.0,
+            "equity": 300.9718447763858,
+            "capex": 24.129385677936675,
+            "dividends": 22.016332579860116,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 67.45496831567185,
+            "cfi": -24.129385677936675,
+            "cff": -27.016332579860116,
+            "ebit": 75.58777526620038,
+            "ebitda": 90.48519629226251,
+            "delta_nwc": 2.4832841600405686,
+            "ufcf": 44.97558263773518,
+            "balance_check": -1.1368683772161603e-13,
+            "cash_check": -1.0658141036401503e-14
+          }
+        ],
+        "enterprise_value": 563.2493666266057,
+        "equity_value": 540.4622362090481,
+        "pv_explicit_fcf": 144.90682787658523,
+        "terminal_value": 658.5710314811222,
+        "pv_terminal_value": 418.34253875002054,
+        "terminal_share": 0.7427305977378078,
+        "wacc": 0.095,
+        "terminal_growth": 0.025,
+        "opening_cash": 37.212869582442416,
+        "opening_debt": 60.0,
+        "max_balance_error": 1.1368683772161603e-13,
+        "max_cash_error": 1.0658141036401503e-14
+      },
+      "Downside": {
+        "annual_forecast": [
+          {
+            "year": 2026,
+            "revenue": 306.2052279143245,
+            "cogs": 183.7231367485947,
+            "opex": 75.0202808390095,
+            "depreciation": 11.432647391060657,
+            "interest": 4.5,
+            "tax": 7.88229073391491,
+            "net_income": 23.64687220174473,
+            "ar": 54.52969812172902,
+            "inventory": 39.26138264764489,
+            "ap": 25.67090403884474,
+            "ppe": 132.4380556004567,
+            "cash": 27.51291751894503,
+            "debt": 55.0,
+            "equity": 173.07114984993095,
+            "capex": 16.841287535287847,
+            "dividends": 4.729374440348947,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 16.87070991213941,
+            "cfi": -16.841287535287847,
+            "cff": -9.729374440348947,
+            "ebit": 36.02916293565964,
+            "ebitda": 47.4618103267203,
+            "delta_nwc": 18.20880968066598,
+            "ufcf": 3.4044223768515636,
+            "balance_check": -2.842170943040401e-14,
+            "cash_check": -1.7763568394002505e-15
+          },
+          {
+            "year": 2027,
+            "revenue": 312.329332472611,
+            "cogs": 185.83595282120353,
+            "opex": 75.89602779084447,
+            "depreciation": 11.919425004041102,
+            "interest": 4.125,
+            "tax": 8.63823171413047,
+            "net_income": 25.91469514239141,
+            "ar": 54.764595282868775,
+            "inventory": 38.69460935455197,
+            "ap": 25.966119435291453,
+            "ppe": 137.69674388240918,
+            "cash": 38.61307687930553,
+            "debt": 50.0,
+            "equity": 193.8029059638441,
+            "capex": 17.178113285993604,
+            "dividends": 5.182939028478282,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 38.461211674832384,
+            "cfi": -17.178113285993604,
+            "cff": -10.182939028478282,
+            "ebit": 38.67792685652188,
+            "ebitda": 50.59735186056298,
+            "delta_nwc": -0.6270915283998733,
+            "ufcf": 24.37684838883878,
+            "balance_check": -1.1368683772161603e-13,
+            "cash_check": 1.7763568394002505e-15
+          },
+          {
+            "year": 2028,
+            "revenue": 320.1375657844262,
+            "cogs": 188.88116381281148,
+            "opex": 76.83301578826229,
+            "depreciation": 12.392706949416826,
+            "interest": 3.75,
+            "tax": 9.570169808483906,
+            "net_income": 28.71050942545172,
+            "ar": 55.25662094361329,
+            "inventory": 38.29371540314534,
+            "ap": 26.3916146697353,
+            "ppe": 142.91160305113578,
+            "cash": 51.700988776046266,
+            "debt": 45.0,
+            "equity": 216.77131350420547,
+            "capex": 17.607566118143442,
+            "dividends": 5.742101885090344,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 41.437579899974516,
+            "cfi": -17.607566118143442,
+            "cff": -10.742101885090344,
+            "ebit": 42.03067923393562,
+            "ebitda": 54.42338618335245,
+            "delta_nwc": -0.3343635251059709,
+            "ufcf": 26.642513781831074,
+            "balance_check": -5.684341886080802e-14,
+            "cash_check": 5.329070518200751e-15
+          },
+          {
+            "year": 2029,
+            "revenue": 329.741692757959,
+            "cogs": 192.898890263406,
+            "opex": 78.47852287639424,
+            "depreciation": 12.862044274602221,
+            "interest": 3.375,
+            "tax": 10.531808835889139,
+            "net_income": 31.59542650766742,
+            "ar": 56.01091767395468,
+            "inventory": 38.0512879423705,
+            "ap": 26.95299562584577,
+            "ppe": 148.1853518782213,
+            "cash": 66.75309284163862,
+            "debt": 40.0,
+            "equity": 242.0476547103394,
+            "capex": 18.135793101687746,
+            "dividends": 6.319085301533484,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 44.50698246881356,
+            "cfi": -18.135793101687746,
+            "cff": -11.319085301533484,
+            "ebit": 45.502235343556556,
+            "ebitda": 58.364279618158776,
+            "delta_nwc": -0.049511686543922906,
+            "ufcf": 28.902439367125815,
+            "balance_check": -2.842170943040401e-14,
+            "cash_check": 2.1316282072803006e-14
+          },
+          {
+            "year": 2030,
+            "revenue": 341.28265200448755,
+            "cogs": 197.9439381626028,
+            "opex": 80.20142322105457,
+            "depreciation": 13.336681669039915,
+            "interest": 3.0,
+            "tax": 11.700152237947567,
+            "net_income": 35.1004567138427,
+            "ar": 56.10125786375138,
+            "inventory": 37.961851154471766,
+            "ap": 27.65792012682943,
+            "ppe": 153.6192160694282,
+            "cash": 85.10361512059157,
+            "debt": 35.0,
+            "equity": 270.1280200814136,
+            "capex": 18.770545860246816,
+            "dividends": 7.020091342768541,
+            "new_borrowing": 0,
+            "debt_repayment": 5,
+            "cfo": 49.1411594819683,
+            "cfi": -18.770545860246816,
+            "cff": -12.020091342768541,
+            "ebit": 49.80060895179027,
+            "ebitda": 63.137290620830186,
+            "delta_nwc": -0.7040210990856792,
+            "ufcf": 32.62061362172149,
+            "balance_check": -1.1368683772161603e-13,
+            "cash_check": 7.105427357601002e-15
+          }
+        ],
+        "enterprise_value": 387.9795056939584,
+        "equity_value": 365.1923752764008,
+        "pv_explicit_fcf": 84.55730374020811,
+        "terminal_value": 477.6589851752075,
+        "pv_terminal_value": 303.4222019537503,
+        "terminal_share": 0.7820572929774604,
+        "wacc": 0.095,
+        "terminal_growth": 0.025,
+        "opening_cash": 37.212869582442416,
+        "opening_debt": 60.0,
+        "max_balance_error": 1.1368683772161603e-13,
+        "max_cash_error": 2.1316282072803006e-14
+      }
+    },
+    "sensitivity": [
+      [
+        {
+          "wacc": 0.075,
+          "g": 0.015,
+          "equity_value": 660.5203200012272
+        },
+        {
+          "wacc": 0.075,
+          "g": 0.02,
+          "equity_value": 711.5471989499201
+        },
+        {
+          "wacc": 0.075,
+          "g": 0.025,
+          "equity_value": 772.7794536883513
+        },
+        {
+          "wacc": 0.075,
+          "g": 0.03,
+          "equity_value": 847.6188761464341
+        },
+        {
+          "wacc": 0.075,
+          "g": 0.035,
+          "equity_value": 941.1681542190377
+        }
+      ],
+      [
+        {
+          "wacc": 0.085,
+          "g": 0.015,
+          "equity_value": 559.9519292322129
+        },
+        {
+          "wacc": 0.085,
+          "g": 0.02,
+          "equity_value": 595.6148125853535
+        },
+        {
+          "wacc": 0.085,
+          "g": 0.025,
+          "equity_value": 637.2215098306841
+        },
+        {
+          "wacc": 0.085,
+          "g": 0.03,
+          "equity_value": 686.3930611206205
+        },
+        {
+          "wacc": 0.085,
+          "g": 0.035,
+          "equity_value": 745.398922668544
+        }
+      ],
+      [
+        {
+          "wacc": 0.095,
+          "g": 0.015,
+          "equity_value": 484.59820207108817
+        },
+        {
+          "wacc": 0.095,
+          "g": 0.02,
+          "equity_value": 510.66808466880286
+        },
+        {
+          "wacc": 0.095,
+          "g": 0.025,
+          "equity_value": 540.4622362090481
+        },
+        {
+          "wacc": 0.095,
+          "g": 0.03,
+          "equity_value": 574.8401033708699
+        },
+        {
+          "wacc": 0.095,
+          "g": 0.035,
+          "equity_value": 614.9476150596616
+        }
+      ],
+      [
+        {
+          "wacc": 0.105,
+          "g": 0.015,
+          "equity_value": 426.0516792801569
+        },
+        {
+          "wacc": 0.105,
+          "g": 0.02,
+          "equity_value": 445.7684712942639
+        },
+        {
+          "wacc": 0.105,
+          "g": 0.025,
+          "equity_value": 467.9498623101341
+        },
+        {
+          "wacc": 0.105,
+          "g": 0.03,
+          "equity_value": 493.08877212812035
+        },
+        {
+          "wacc": 0.105,
+          "g": 0.035,
+          "equity_value": 521.8189547772474
+        }
+      ],
+      [
+        {
+          "wacc": 0.115,
+          "g": 0.015,
+          "equity_value": 379.26800292686215
+        },
+        {
+          "wacc": 0.115,
+          "g": 0.02,
+          "equity_value": 394.58324013277183
+        },
+        {
+          "wacc": 0.115,
+          "g": 0.025,
+          "equity_value": 411.60017036156034
+        },
+        {
+          "wacc": 0.115,
+          "g": 0.03,
+          "equity_value": 430.619092381971
+        },
+        {
+          "wacc": 0.115,
+          "g": 0.035,
+          "equity_value": 452.0153796549331
+        }
+      ]
+    ],
+    "model_notes": [
+      "Annual year-end discounting; terminal perpetuity grows 2030 unleveredFCF at2.5%.",
+      "Taxes=25% of positive taxable earnings; no tax-loss carryforwards or tax benefit for losses.",
+      "Interest uses opening debt; cash earns no interest.",
+      "D&A=9% of opening netPP&E is an illustrative calibrated aggregate depreciation driver, not an asset-vintage schedule.",
+      "No acquisitions, leases, FX, goodwill, or other assets/liabilities. All cash is treated as non-operating in the EV-to-equity bridge.",
+      "Closing cash is derived from operating/investing/financing cashflows; equity rolls from retained earnings, not a balancing plug.",
+      "2027\u20132030 growth assumptions are analyst scenarios, not statistical forecasts.",
+      "Validation uses observed holdout industrial_index, so the driver-model test is conditional on realized predictors; 2026 projection is conditional on assumed predictors.",
+      "Terminal value extrapolates final-year FCF without separately normalizing reinvestment to terminal growth; a steady-state return-on-invested-capital analysis is outside this illustration.",
+      "The annual forecast is the sum of monthly conditional medians, used as a planning total; it is not a formal annual conditional mean or median. HC1 addresses heteroskedasticity, not serial correlation."
+    ]
+  },
+  "monthly": [
+    {
+      "date": "2018-01-01",
+      "revenue_musd": 12.419016139295985,
+      "industrial_index": 99.36391534367064,
+      "month": 1,
+      "trend": 1,
+      "split": "train"
+    },
+    {
+      "date": "2018-02-01",
+      "revenue_musd": 12.388252832694981,
+      "industrial_index": 100.01167849210846,
+      "month": 2,
+      "trend": 2,
+      "split": "train"
+    },
+    {
+      "date": "2018-03-01",
+      "revenue_musd": 13.749573091010603,
+      "industrial_index": 102.75959855029247,
+      "month": 3,
+      "trend": 3,
+      "split": "train"
+    },
+    {
+      "date": "2018-04-01",
+      "revenue_musd": 14.14793530568246,
+      "industrial_index": 103.09349059495823,
+      "month": 4,
+      "trend": 4,
+      "split": "train"
+    },
+    {
+      "date": "2018-05-01",
+      "revenue_musd": 14.220830263519868,
+      "industrial_index": 103.1243356375627,
+      "month": 5,
+      "trend": 5,
+      "split": "train"
+    },
+    {
+      "date": "2018-06-01",
+      "revenue_musd": 14.253577138376809,
+      "industrial_index": 103.46543638331119,
+      "month": 6,
+      "trend": 6,
+      "split": "train"
+    },
+    {
+      "date": "2018-07-01",
+      "revenue_musd": 13.910107989902112,
+      "industrial_index": 103.95193073296329,
+      "month": 7,
+      "trend": 7,
+      "split": "train"
+    },
+    {
+      "date": "2018-08-01",
+      "revenue_musd": 13.4400813990168,
+      "industrial_index": 103.74188706259201,
+      "month": 8,
+      "trend": 8,
+      "split": "train"
+    },
+    {
+      "date": "2018-09-01",
+      "revenue_musd": 14.455196049844753,
+      "industrial_index": 103.46445334278107,
+      "month": 9,
+      "trend": 9,
+      "split": "train"
+    },
+    {
+      "date": "2018-10-01",
+      "revenue_musd": 15.068081697262194,
+      "industrial_index": 104.50885927988124,
+      "month": 10,
+      "trend": 10,
+      "split": "train"
+    },
+    {
+      "date": "2018-11-01",
+      "revenue_musd": 14.636121578503902,
+      "industrial_index": 104.03408585377333,
+      "month": 11,
+      "trend": 11,
+      "split": "train"
+    },
+    {
+      "date": "2018-12-01",
+      "revenue_musd": 13.127359791872966,
+      "industrial_index": 103.42255527737657,
+      "month": 12,
+      "trend": 12,
+      "split": "train"
+    },
+    {
+      "date": "2019-01-01",
+      "revenue_musd": 13.716563239469055,
+      "industrial_index": 103.3762182560909,
+      "month": 1,
+      "trend": 13,
+      "split": "train"
+    },
+    {
+      "date": "2019-02-01",
+      "revenue_musd": 14.09007823673552,
+      "industrial_index": 103.65918707011153,
+      "month": 2,
+      "trend": 14,
+      "split": "train"
+    },
+    {
+      "date": "2019-03-01",
+      "revenue_musd": 14.403184231783094,
+      "industrial_index": 101.68635531369347,
+      "month": 3,
+      "trend": 15,
+      "split": "train"
+    },
+    {
+      "date": "2019-04-01",
+      "revenue_musd": 14.434891297803594,
+      "industrial_index": 100.59819409791399,
+      "month": 4,
+      "trend": 16,
+      "split": "train"
+    },
+    {
+      "date": "2019-05-01",
+      "revenue_musd": 15.008271243419363,
+      "industrial_index": 101.3697513544846,
+      "month": 5,
+      "trend": 17,
+      "split": "train"
+    },
+    {
+      "date": "2019-06-01",
+      "revenue_musd": 14.429132463921267,
+      "industrial_index": 100.83130912793727,
+      "month": 6,
+      "trend": 18,
+      "split": "train"
+    },
+    {
+      "date": "2019-07-01",
+      "revenue_musd": 13.889144238637604,
+      "industrial_index": 100.5748925853656,
+      "month": 7,
+      "trend": 19,
+      "split": "train"
+    },
+    {
+      "date": "2019-08-01",
+      "revenue_musd": 14.330171947146777,
+      "industrial_index": 100.52601233364554,
+      "month": 8,
+      "trend": 20,
+      "split": "train"
+    },
+    {
+      "date": "2019-09-01",
+      "revenue_musd": 15.138537879551402,
+      "industrial_index": 99.58291343052841,
+      "month": 9,
+      "trend": 21,
+      "split": "train"
+    },
+    {
+      "date": "2019-10-01",
+      "revenue_musd": 15.333366435722771,
+      "industrial_index": 99.85455631527468,
+      "month": 10,
+      "trend": 22,
+      "split": "train"
+    },
+    {
+      "date": "2019-11-01",
+      "revenue_musd": 14.556794410465875,
+      "industrial_index": 98.19549762702663,
+      "month": 11,
+      "trend": 23,
+      "split": "train"
+    },
+    {
+      "date": "2019-12-01",
+      "revenue_musd": 13.192985095417587,
+      "industrial_index": 100.27533005298567,
+      "month": 12,
+      "trend": 24,
+      "split": "train"
+    },
+    {
+      "date": "2020-01-01",
+      "revenue_musd": 13.651184536683877,
+      "industrial_index": 100.52881594273022,
+      "month": 1,
+      "trend": 25,
+      "split": "train"
+    },
+    {
+      "date": "2020-02-01",
+      "revenue_musd": 14.585446674988761,
+      "industrial_index": 100.3838131264615,
+      "month": 2,
+      "trend": 26,
+      "split": "train"
+    },
+    {
+      "date": "2020-03-01",
+      "revenue_musd": 13.091823588916109,
+      "industrial_index": 93.13989374155214,
+      "month": 3,
+      "trend": 27,
+      "split": "train"
+    },
+    {
+      "date": "2020-04-01",
+      "revenue_musd": 13.8738099783721,
+      "industrial_index": 91.52845195834672,
+      "month": 4,
+      "trend": 28,
+      "split": "train"
+    },
+    {
+      "date": "2020-05-01",
+      "revenue_musd": 13.51741720082139,
+      "industrial_index": 92.30820506808597,
+      "month": 5,
+      "trend": 29,
+      "split": "train"
+    },
+    {
+      "date": "2020-06-01",
+      "revenue_musd": 14.59585192210416,
+      "industrial_index": 93.81552697255503,
+      "month": 6,
+      "trend": 30,
+      "split": "train"
+    },
+    {
+      "date": "2020-07-01",
+      "revenue_musd": 13.73088610061133,
+      "industrial_index": 94.8767007260115,
+      "month": 7,
+      "trend": 31,
+      "split": "train"
+    },
+    {
+      "date": "2020-08-01",
+      "revenue_musd": 13.170437888312945,
+      "industrial_index": 95.76752819095543,
+      "month": 8,
+      "trend": 32,
+      "split": "train"
+    },
+    {
+      "date": "2020-09-01",
+      "revenue_musd": 16.327387870141347,
+      "industrial_index": 104.13849134419196,
+      "month": 9,
+      "trend": 33,
+      "split": "train"
+    },
+    {
+      "date": "2020-10-01",
+      "revenue_musd": 17.80547093845075,
+      "industrial_index": 104.75772802203649,
+      "month": 10,
+      "trend": 34,
+      "split": "train"
+    },
+    {
+      "date": "2020-11-01",
+      "revenue_musd": 17.78029343409045,
+      "industrial_index": 106.32256224187162,
+      "month": 11,
+      "trend": 35,
+      "split": "train"
+    },
+    {
+      "date": "2020-12-01",
+      "revenue_musd": 15.466139572234082,
+      "industrial_index": 105.87723663427532,
+      "month": 12,
+      "trend": 36,
+      "split": "train"
+    },
+    {
+      "date": "2021-01-01",
+      "revenue_musd": 16.775138434297183,
+      "industrial_index": 105.71484453315335,
+      "month": 1,
+      "trend": 37,
+      "split": "train"
+    },
+    {
+      "date": "2021-02-01",
+      "revenue_musd": 16.901423610887754,
+      "industrial_index": 107.67464357137959,
+      "month": 2,
+      "trend": 38,
+      "split": "train"
+    },
+    {
+      "date": "2021-03-01",
+      "revenue_musd": 18.14071377350709,
+      "industrial_index": 107.67417970654824,
+      "month": 3,
+      "trend": 39,
+      "split": "train"
+    },
+    {
+      "date": "2021-04-01",
+      "revenue_musd": 17.783136473217127,
+      "industrial_index": 107.5602169357713,
+      "month": 4,
+      "trend": 40,
+      "split": "train"
+    },
+    {
+      "date": "2021-05-01",
+      "revenue_musd": 19.015427925912896,
+      "industrial_index": 107.78236305352586,
+      "month": 5,
+      "trend": 41,
+      "split": "train"
+    },
+    {
+      "date": "2021-06-01",
+      "revenue_musd": 18.367960197274563,
+      "industrial_index": 106.87466672615595,
+      "month": 6,
+      "trend": 42,
+      "split": "train"
+    },
+    {
+      "date": "2021-07-01",
+      "revenue_musd": 17.89249097079123,
+      "industrial_index": 106.88585693026879,
+      "month": 7,
+      "trend": 43,
+      "split": "train"
+    },
+    {
+      "date": "2021-08-01",
+      "revenue_musd": 16.654344084741428,
+      "industrial_index": 106.38116665242218,
+      "month": 8,
+      "trend": 44,
+      "split": "train"
+    },
+    {
+      "date": "2021-09-01",
+      "revenue_musd": 18.970403184987106,
+      "industrial_index": 106.85111850490497,
+      "month": 9,
+      "trend": 45,
+      "split": "train"
+    },
+    {
+      "date": "2021-10-01",
+      "revenue_musd": 18.59549906116919,
+      "industrial_index": 105.48733196055184,
+      "month": 10,
+      "trend": 46,
+      "split": "train"
+    },
+    {
+      "date": "2021-11-01",
+      "revenue_musd": 19.04760179890605,
+      "industrial_index": 105.65756673313047,
+      "month": 11,
+      "trend": 47,
+      "split": "train"
+    },
+    {
+      "date": "2021-12-01",
+      "revenue_musd": 16.27952650141758,
+      "industrial_index": 105.97191134238308,
+      "month": 12,
+      "trend": 48,
+      "split": "train"
+    },
+    {
+      "date": "2022-01-01",
+      "revenue_musd": 16.28458309206204,
+      "industrial_index": 104.07189567914678,
+      "month": 1,
+      "trend": 49,
+      "split": "train"
+    },
+    {
+      "date": "2022-02-01",
+      "revenue_musd": 18.065731230325653,
+      "industrial_index": 104.40772239835219,
+      "month": 2,
+      "trend": 50,
+      "split": "train"
+    },
+    {
+      "date": "2022-03-01",
+      "revenue_musd": 17.89815501772414,
+      "industrial_index": 102.56211733064856,
+      "month": 3,
+      "trend": 51,
+      "split": "train"
+    },
+    {
+      "date": "2022-04-01",
+      "revenue_musd": 18.040779017287996,
+      "industrial_index": 101.98350629491433,
+      "month": 4,
+      "trend": 52,
+      "split": "train"
+    },
+    {
+      "date": "2022-05-01",
+      "revenue_musd": 19.33080902553801,
+      "industrial_index": 102.1309763436467,
+      "month": 5,
+      "trend": 53,
+      "split": "train"
+    },
+    {
+      "date": "2022-06-01",
+      "revenue_musd": 18.92128843342045,
+      "industrial_index": 103.11818255235289,
+      "month": 6,
+      "trend": 54,
+      "split": "train"
+    },
+    {
+      "date": "2022-07-01",
+      "revenue_musd": 18.46961923939305,
+      "industrial_index": 104.27009822367786,
+      "month": 7,
+      "trend": 55,
+      "split": "train"
+    },
+    {
+      "date": "2022-08-01",
+      "revenue_musd": 17.18880647699101,
+      "industrial_index": 102.34173020222318,
+      "month": 8,
+      "trend": 56,
+      "split": "train"
+    },
+    {
+      "date": "2022-09-01",
+      "revenue_musd": 19.875853907995925,
+      "industrial_index": 104.61418341912207,
+      "month": 9,
+      "trend": 57,
+      "split": "train"
+    },
+    {
+      "date": "2022-10-01",
+      "revenue_musd": 19.876698256013526,
+      "industrial_index": 104.83576261224783,
+      "month": 10,
+      "trend": 58,
+      "split": "train"
+    },
+    {
+      "date": "2022-11-01",
+      "revenue_musd": 19.223659182740285,
+      "industrial_index": 102.77127117062102,
+      "month": 11,
+      "trend": 59,
+      "split": "train"
+    },
+    {
+      "date": "2022-12-01",
+      "revenue_musd": 16.681786913691774,
+      "industrial_index": 102.4047558201874,
+      "month": 12,
+      "trend": 60,
+      "split": "train"
+    },
+    {
+      "date": "2023-01-01",
+      "revenue_musd": 19.04698450708458,
+      "industrial_index": 106.585652267158,
+      "month": 1,
+      "trend": 61,
+      "split": "train"
+    },
+    {
+      "date": "2023-02-01",
+      "revenue_musd": 20.278741400215242,
+      "industrial_index": 107.23976894033161,
+      "month": 2,
+      "trend": 62,
+      "split": "train"
+    },
+    {
+      "date": "2023-03-01",
+      "revenue_musd": 19.521760542423507,
+      "industrial_index": 105.39658917613679,
+      "month": 3,
+      "trend": 63,
+      "split": "train"
+    },
+    {
+      "date": "2023-04-01",
+      "revenue_musd": 21.278167846638695,
+      "industrial_index": 106.5369336611594,
+      "month": 4,
+      "trend": 64,
+      "split": "train"
+    },
+    {
+      "date": "2023-05-01",
+      "revenue_musd": 21.91133475654927,
+      "industrial_index": 108.64348042716195,
+      "month": 5,
+      "trend": 65,
+      "split": "train"
+    },
+    {
+      "date": "2023-06-01",
+      "revenue_musd": 22.349550226080872,
+      "industrial_index": 109.13975210693796,
+      "month": 6,
+      "trend": 66,
+      "split": "train"
+    },
+    {
+      "date": "2023-07-01",
+      "revenue_musd": 21.026187033533233,
+      "industrial_index": 109.12093787684691,
+      "month": 7,
+      "trend": 67,
+      "split": "train"
+    },
+    {
+      "date": "2023-08-01",
+      "revenue_musd": 22.00894837697603,
+      "industrial_index": 110.77409047661807,
+      "month": 8,
+      "trend": 68,
+      "split": "train"
+    },
+    {
+      "date": "2023-09-01",
+      "revenue_musd": 23.28329235942432,
+      "industrial_index": 110.11103603095107,
+      "month": 9,
+      "trend": 69,
+      "split": "train"
+    },
+    {
+      "date": "2023-10-01",
+      "revenue_musd": 23.597089095302486,
+      "industrial_index": 110.48031179768218,
+      "month": 10,
+      "trend": 70,
+      "split": "train"
+    },
+    {
+      "date": "2023-11-01",
+      "revenue_musd": 23.478265209206263,
+      "industrial_index": 110.70202999606086,
+      "month": 11,
+      "trend": 71,
+      "split": "train"
+    },
+    {
+      "date": "2023-12-01",
+      "revenue_musd": 20.321877447921658,
+      "industrial_index": 110.85859302552568,
+      "month": 12,
+      "trend": 72,
+      "split": "train"
+    },
+    {
+      "date": "2024-01-01",
+      "revenue_musd": 21.50080457480675,
+      "industrial_index": 110.33840778090305,
+      "month": 1,
+      "trend": 73,
+      "split": "train"
+    },
+    {
+      "date": "2024-02-01",
+      "revenue_musd": 21.47337148853247,
+      "industrial_index": 111.24308526434743,
+      "month": 2,
+      "trend": 74,
+      "split": "train"
+    },
+    {
+      "date": "2024-03-01",
+      "revenue_musd": 22.295914041636806,
+      "industrial_index": 109.68268425925449,
+      "month": 3,
+      "trend": 75,
+      "split": "train"
+    },
+    {
+      "date": "2024-04-01",
+      "revenue_musd": 23.58102603253866,
+      "industrial_index": 109.78018115639101,
+      "month": 4,
+      "trend": 76,
+      "split": "train"
+    },
+    {
+      "date": "2024-05-01",
+      "revenue_musd": 22.603896080962407,
+      "industrial_index": 108.8568287143779,
+      "month": 5,
+      "trend": 77,
+      "split": "train"
+    },
+    {
+      "date": "2024-06-01",
+      "revenue_musd": 23.40572923286539,
+      "industrial_index": 109.6754138392295,
+      "month": 6,
+      "trend": 78,
+      "split": "train"
+    },
+    {
+      "date": "2024-07-01",
+      "revenue_musd": 20.983358565013145,
+      "industrial_index": 108.17320118879394,
+      "month": 7,
+      "trend": 79,
+      "split": "train"
+    },
+    {
+      "date": "2024-08-01",
+      "revenue_musd": 21.483398993038314,
+      "industrial_index": 107.19357758412386,
+      "month": 8,
+      "trend": 80,
+      "split": "train"
+    },
+    {
+      "date": "2024-09-01",
+      "revenue_musd": 22.78016184441858,
+      "industrial_index": 105.96322769062563,
+      "month": 9,
+      "trend": 81,
+      "split": "train"
+    },
+    {
+      "date": "2024-10-01",
+      "revenue_musd": 23.385361090176904,
+      "industrial_index": 107.43804816157284,
+      "month": 10,
+      "trend": 82,
+      "split": "train"
+    },
+    {
+      "date": "2024-11-01",
+      "revenue_musd": 24.137217821999815,
+      "industrial_index": 107.24301411005511,
+      "month": 11,
+      "trend": 83,
+      "split": "train"
+    },
+    {
+      "date": "2024-12-01",
+      "revenue_musd": 20.781878491281354,
+      "industrial_index": 106.8506436624473,
+      "month": 12,
+      "trend": 84,
+      "split": "train"
+    },
+    {
+      "date": "2025-01-01",
+      "revenue_musd": 20.763006013728894,
+      "industrial_index": 106.4814927346606,
+      "month": 1,
+      "trend": 85,
+      "split": "validation"
+    },
+    {
+      "date": "2025-02-01",
+      "revenue_musd": 21.433311141543058,
+      "industrial_index": 106.13105743827761,
+      "month": 2,
+      "trend": 86,
+      "split": "validation"
+    },
+    {
+      "date": "2025-03-01",
+      "revenue_musd": 23.239139415311513,
+      "industrial_index": 107.53043502064905,
+      "month": 3,
+      "trend": 87,
+      "split": "validation"
+    },
+    {
+      "date": "2025-04-01",
+      "revenue_musd": 23.996143955764325,
+      "industrial_index": 108.16553356403905,
+      "month": 4,
+      "trend": 88,
+      "split": "validation"
+    },
+    {
+      "date": "2025-05-01",
+      "revenue_musd": 26.177771866039265,
+      "industrial_index": 108.49636993442334,
+      "month": 5,
+      "trend": 89,
+      "split": "validation"
+    },
+    {
+      "date": "2025-06-01",
+      "revenue_musd": 25.48921127892032,
+      "industrial_index": 108.42245746373774,
+      "month": 6,
+      "trend": 90,
+      "split": "validation"
+    },
+    {
+      "date": "2025-07-01",
+      "revenue_musd": 22.661890272592597,
+      "industrial_index": 107.76112291402494,
+      "month": 7,
+      "trend": 91,
+      "split": "validation"
+    },
+    {
+      "date": "2025-08-01",
+      "revenue_musd": 23.977194919816096,
+      "industrial_index": 108.78930711903213,
+      "month": 8,
+      "trend": 92,
+      "split": "validation"
+    },
+    {
+      "date": "2025-09-01",
+      "revenue_musd": 25.200413190573038,
+      "industrial_index": 109.33615835338598,
+      "month": 9,
+      "trend": 93,
+      "split": "validation"
+    },
+    {
+      "date": "2025-10-01",
+      "revenue_musd": 26.77717544250028,
+      "industrial_index": 110.17643376225887,
+      "month": 10,
+      "trend": 94,
+      "split": "validation"
+    },
+    {
+      "date": "2025-11-01",
+      "revenue_musd": 26.318039176249112,
+      "industrial_index": 111.28671028198684,
+      "month": 11,
+      "trend": 95,
+      "split": "validation"
+    },
+    {
+      "date": "2025-12-01",
+      "revenue_musd": 23.14032470507975,
+      "industrial_index": 111.95802996935215,
+      "month": 12,
+      "trend": 96,
+      "split": "validation"
+    }
+  ],
+  "future": [
+    {
+      "date": "2026-01-01",
+      "industrial_index": 112.05802996935215,
+      "month": 1,
+      "trend": 97,
+      "driver_regression": 24.969428625603076,
+      "trend_and_seasonality": 24.277430402317318,
+      "seasonal_naive": 20.763006013728894
+    },
+    {
+      "date": "2026-02-01",
+      "industrial_index": 112.15802996935214,
+      "month": 2,
+      "trend": 98,
+      "driver_regression": 25.73369383019144,
+      "trend_and_seasonality": 25.18950821298516,
+      "seasonal_naive": 21.433311141543058
+    },
+    {
+      "date": "2026-03-01",
+      "industrial_index": 112.25802996935215,
+      "month": 3,
+      "trend": 99,
+      "driver_regression": 26.822993615000843,
+      "trend_and_seasonality": 25.69863012992507,
+      "seasonal_naive": 23.239139415311513
+    },
+    {
+      "date": "2026-04-01",
+      "industrial_index": 112.35802996935215,
+      "month": 4,
+      "trend": 100,
+      "driver_regression": 27.784278707955476,
+      "trend_and_seasonality": 26.517871816115456,
+      "seasonal_naive": 23.996143955764325
+    },
+    {
+      "date": "2026-05-01",
+      "industrial_index": 112.45802996935215,
+      "month": 5,
+      "trend": 101,
+      "driver_regression": 28.441443816672518,
+      "trend_and_seasonality": 27.285028270777975,
+      "seasonal_naive": 26.177771866039265
+    },
+    {
+      "date": "2026-06-01",
+      "industrial_index": 112.55802996935215,
+      "month": 6,
+      "trend": 102,
+      "driver_regression": 28.38252350311964,
+      "trend_and_seasonality": 27.32481240494149,
+      "seasonal_naive": 25.48921127892032
+    },
+    {
+      "date": "2026-07-01",
+      "industrial_index": 112.65802996935216,
+      "month": 7,
+      "trend": 103,
+      "driver_regression": 26.817598545890245,
+      "trend_and_seasonality": 25.791924099593007,
+      "seasonal_naive": 22.661890272592597
+    },
+    {
+      "date": "2026-08-01",
+      "industrial_index": 112.75802996935215,
+      "month": 8,
+      "trend": 104,
+      "driver_regression": 26.65438614098783,
+      "trend_and_seasonality": 25.590516457108638,
+      "seasonal_naive": 23.977194919816096
+    },
+    {
+      "date": "2026-09-01",
+      "industrial_index": 112.85802996935216,
+      "month": 9,
+      "trend": 105,
+      "driver_regression": 28.957957470621594,
+      "trend_and_seasonality": 28.220688328589574,
+      "seasonal_naive": 25.200413190573038
+    },
+    {
+      "date": "2026-10-01",
+      "industrial_index": 112.95802996935215,
+      "month": 10,
+      "trend": 106,
+      "driver_regression": 29.617029478931247,
+      "trend_and_seasonality": 29.012433641728215,
+      "seasonal_naive": 26.77717544250028
+    },
+    {
+      "date": "2026-11-01",
+      "industrial_index": 113.05802996935216,
+      "month": 11,
+      "trend": 107,
+      "driver_regression": 29.43343490648813,
+      "trend_and_seasonality": 28.714571850706424,
+      "seasonal_naive": 26.318039176249112
+    },
+    {
+      "date": "2026-12-01",
+      "industrial_index": 113.15802996935216,
+      "month": 12,
+      "trend": 108,
+      "driver_regression": 25.724348983111877,
+      "trend_and_seasonality": 25.12544267638307,
+      "seasonal_naive": 23.14032470507975
+    }
+  ],
+  "validation": [
+    {
+      "date": "2025-01-01",
+      "revenue_musd": 20.763006013728894,
+      "driver_regression": 21.596535848230154,
+      "trend_and_seasonality": 22.657005830746193,
+      "seasonal_naive": 21.50080457480675
+    },
+    {
+      "date": "2025-02-01",
+      "revenue_musd": 21.433311141543058,
+      "driver_regression": 22.08031669945426,
+      "trend_and_seasonality": 23.525363072694034,
+      "seasonal_naive": 21.47337148853247
+    },
+    {
+      "date": "2025-03-01",
+      "revenue_musd": 23.239139415311513,
+      "driver_regression": 23.40335747661966,
+      "trend_and_seasonality": 23.793011108849296,
+      "seasonal_naive": 22.295914041636806
+    },
+    {
+      "date": "2025-04-01",
+      "revenue_musd": 23.996143955764325,
+      "driver_regression": 24.47907308960674,
+      "trend_and_seasonality": 24.549140009500427,
+      "seasonal_naive": 23.58102603253866
+    },
+    {
+      "date": "2025-05-01",
+      "revenue_musd": 26.177771866039265,
+      "driver_regression": 24.933095111976332,
+      "trend_and_seasonality": 25.049131335784555,
+      "seasonal_naive": 22.603896080962407
+    },
+    {
+      "date": "2025-06-01",
+      "revenue_musd": 25.48921127892032,
+      "driver_regression": 24.894548402534866,
+      "trend_and_seasonality": 25.186603336275237,
+      "seasonal_naive": 23.40572923286539
+    },
+    {
+      "date": "2025-07-01",
+      "revenue_musd": 22.661890272592597,
+      "driver_regression": 23.41418242381346,
+      "trend_and_seasonality": 23.977757195555785,
+      "seasonal_naive": 20.983358565013145
+    },
+    {
+      "date": "2025-08-01",
+      "revenue_musd": 23.977194919816096,
+      "driver_regression": 23.440444780956224,
+      "trend_and_seasonality": 23.57312516009971,
+      "seasonal_naive": 21.483398993038314
+    },
+    {
+      "date": "2025-09-01",
+      "revenue_musd": 25.200413190573038,
+      "driver_regression": 25.792265887899063,
+      "trend_and_seasonality": 26.175107001761596,
+      "seasonal_naive": 22.78016184441858
+    },
+    {
+      "date": "2025-10-01",
+      "revenue_musd": 26.77717544250028,
+      "driver_regression": 26.57835291041978,
+      "trend_and_seasonality": 26.782824419502155,
+      "seasonal_naive": 23.385361090176904
+    },
+    {
+      "date": "2025-11-01",
+      "revenue_musd": 26.318039176249112,
+      "driver_regression": 26.924013355977912,
+      "trend_and_seasonality": 26.53428157634579,
+      "seasonal_naive": 24.137217821999815
+    },
+    {
+      "date": "2025-12-01",
+      "revenue_musd": 23.14032470507975,
+      "driver_regression": 23.74663440799028,
+      "trend_and_seasonality": 23.201606753045446,
+      "seasonal_naive": 20.781878491281354
+    }
+  ],
+  "coefficients": [
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "constant",
+      "coefficient": 0.9686474586289598,
+      "hc1_standard_error": 0.08209075113805586,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "trend",
+      "coefficient": 0.005643442027269217,
+      "hc1_standard_error": 0.00011489627092971596,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "industrial_index",
+      "coefficient": 0.01525328817029258,
+      "hc1_standard_error": 0.0007941424521975433,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_02",
+      "coefficient": 0.0218554886803812,
+      "hc1_standard_error": 0.014425526837517445,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_03",
+      "coefficient": 0.053059866529671915,
+      "hc1_standard_error": 0.012198989573068501,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_04",
+      "coefficient": 0.08266818236622087,
+      "hc1_standard_error": 0.013451897182829282,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_05",
+      "coefficient": 0.09035584683783132,
+      "hc1_standard_error": 0.014555495644233248,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_06",
+      "coefficient": 0.08429261093377155,
+      "hc1_standard_error": 0.012613800846602836,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_07",
+      "coefficient": 0.02742978078277521,
+      "hc1_standard_error": 0.01362663977003629,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_08",
+      "coefficient": 0.007224163354763251,
+      "hc1_standard_error": 0.01629130721795687,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_09",
+      "coefficient": 0.08885117723823414,
+      "hc1_standard_error": 0.01358041211697554,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_10",
+      "coefficient": 0.10041318116906672,
+      "hc1_standard_error": 0.011989317476611869,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_11",
+      "coefficient": 0.09075586553597273,
+      "hc1_standard_error": 0.0119470487512759,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Driver regression",
+      "scope": "training",
+      "term": "month_12",
+      "coefficient": -0.05070517604587591,
+      "hc1_standard_error": 0.01115161491310365,
+      "n": 84,
+      "r_squared": 0.9887827604950842
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "constant",
+      "coefficient": 2.4965011607638523,
+      "hc1_standard_error": 0.019794872140361422,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "trend",
+      "coefficient": 0.007340799429882189,
+      "hc1_standard_error": 0.0002220903296913383,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_02",
+      "coefficient": 0.030269207101902396,
+      "hc1_standard_error": 0.0203710749444773,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_03",
+      "coefficient": 0.034241175501276346,
+      "hc1_standard_error": 0.03540850925281953,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_04",
+      "coefficient": 0.05818531287055887,
+      "hc1_standard_error": 0.031593856418281094,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_05",
+      "coefficient": 0.07100683969204862,
+      "hc1_standard_error": 0.036788801631803786,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_06",
+      "coefficient": 0.06913913006762543,
+      "hc1_standard_error": 0.02834880861977677,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_07",
+      "coefficient": 0.01261270821692875,
+      "hc1_standard_error": 0.031461621412967815,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_08",
+      "coefficient": -0.011747409568850817,
+      "hc1_standard_error": 0.0355024543863706,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_09",
+      "coefficient": 0.08561333694275468,
+      "hc1_standard_error": 0.023311460184263933,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_10",
+      "coefficient": 0.10122449502342228,
+      "hc1_standard_error": 0.023739709297290107,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_11",
+      "coefficient": 0.0845604347429641,
+      "hc1_standard_error": 0.026016087771941813,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "training",
+      "term": "month_12",
+      "coefficient": -0.05699637316161901,
+      "hc1_standard_error": 0.024778041940238197,
+      "n": 84,
+      "r_squared": 0.9182294103806001
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "constant",
+      "coefficient": 0.9483325608150068,
+      "hc1_standard_error": 0.08338984331484993,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "trend",
+      "coefficient": 0.0055678879272349074,
+      "hc1_standard_error": 0.00010789077224383604,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "industrial_index",
+      "coefficient": 0.0154315985414988,
+      "hc1_standard_error": 0.000814069635822728,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_02",
+      "coefficient": 0.023037907833298357,
+      "hc1_standard_error": 0.01369277331228267,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_03",
+      "coefficient": 0.05738517322146857,
+      "hc1_standard_error": 0.011214463807934057,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_04",
+      "coefficient": 0.0854849816916291,
+      "hc1_standard_error": 0.012666005366538622,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_05",
+      "coefficient": 0.101750958038073,
+      "hc1_standard_error": 0.014741824799467798,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_06",
+      "coefficient": 0.09256612563910745,
+      "hc1_standard_error": 0.01233287176145669,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_07",
+      "coefficient": 0.02873982588525263,
+      "hc1_standard_error": 0.012981208905155493,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_08",
+      "coefficient": 0.015524164156275964,
+      "hc1_standard_error": 0.01505356172342577,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_09",
+      "coefficient": 0.09130443185468581,
+      "hc1_standard_error": 0.012865793457056782,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_10",
+      "coefficient": 0.10669786450340141,
+      "hc1_standard_error": 0.011251572839580577,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_11",
+      "coefficient": 0.09336857048348686,
+      "hc1_standard_error": 0.011634576157636653,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Driver regression",
+      "scope": "full_refit",
+      "term": "month_12",
+      "coefficient": -0.0484357725693533,
+      "hc1_standard_error": 0.010931199200409301,
+      "n": 96,
+      "r_squared": 0.9901611167361706
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "constant",
+      "coefficient": 2.4920387639627606,
+      "hc1_standard_error": 0.019511795731762552,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "trend",
+      "coefficient": 0.007190807884153919,
+      "hc1_standard_error": 0.00018004147663283415,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_02",
+      "coefficient": 0.029689630459100374,
+      "hc1_standard_error": 0.02325321527809141,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_03",
+      "coefficient": 0.04250894364900953,
+      "hc1_standard_error": 0.03230494324212393,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_04",
+      "coefficient": 0.06669936145833852,
+      "hc1_standard_error": 0.029420499316816867,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_05",
+      "coefficient": 0.0880277765042863,
+      "hc1_standard_error": 0.03413945153873096,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_06",
+      "coefficient": 0.08229400056564001,
+      "hc1_standard_error": 0.02696161500851252,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_07",
+      "coefficient": 0.017369447500540793,
+      "hc1_standard_error": 0.029687643868365383,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_08",
+      "coefficient": 0.002339048042671655,
+      "hc1_standard_error": 0.032726942459276494,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_09",
+      "coefficient": 0.09298174584456335,
+      "hc1_standard_error": 0.02304600672497274,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_10",
+      "coefficient": 0.11346008468447048,
+      "hc1_standard_error": 0.022893523760700824,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_11",
+      "coefficient": 0.09594951633685739,
+      "hc1_standard_error": 0.024996042279081615,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    },
+    {
+      "model": "Trend and seasonality",
+      "scope": "full_refit",
+      "term": "month_12",
+      "coefficient": -0.044765030266835856,
+      "hc1_standard_error": 0.023747124303767173,
+      "n": 96,
+      "r_squared": 0.9368061747800615
+    }
+  ]
+}
